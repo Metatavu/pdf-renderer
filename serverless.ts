@@ -9,6 +9,9 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: 'aws',
     runtime: 'nodejs16.x',
+    deploymentBucket: {
+      name: "${self:service}-${opt:stage, 'dev'}-deploy"
+    },
     apiGateway: {
       minimumCompressionSize: 1024,
       shouldStartNameWithService: true,

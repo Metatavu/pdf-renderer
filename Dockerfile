@@ -3,4 +3,4 @@ WORKDIR /srv/app
 COPY . .
 RUN npm install
 RUN npm install -g serverless
-CMD ["serverless", "offline"]
+CMD ["serverless", "offline", "--host", "0.0.0.0"]
